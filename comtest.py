@@ -13,6 +13,7 @@ for p in ports:
 	    ser=serial.Serial(port=p[0],baudrate=9600)
     else :
 	    print ("No Arduino Device was found connected to the computer")
+	    
 time.sleep(2)
 
 song=['A','1','0','0',' ','1','0','0']
