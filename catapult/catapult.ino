@@ -84,13 +84,11 @@ int auto_run(int jd,int aarm,int shooting)
     Serial.println(jd);
     Serial.println(aarm);
     Serial.println(shooting);
-    if(shooting>=90){
+    if(shooting>=100){
+       Serial.println("shoot");       
        shoot();
        rest();
     }
-    Serial.println("tray is moving");
-    Serial.println(trayServo.read());
-    Serial.println("I've pritened the trayServo position");
 }
 
 int  mylist[]={0, 0, 0, 0, 0, 0, 0};

@@ -16,20 +16,20 @@ for p in ports:
 	    
 time.sleep(2)
 
-song=['A','1','0','0',' ','1','0','0']
-cmd1="A 30 20 20 0 0"
-cmd2="A 90 20 20 0 0"
-cmd3="A 150 20 20 0 0"
-cmds=[cmd1,cmd2,cmd3]
+cmdL="A 30 20 20 "
+cmdM="A 90 20 20 "
+cmdR="A 150 20 20 "
+cmdLF="A 30 20 120 "
+cmdMF="A 90 20 120 "
+cmdRF="A 150 20 120 "
+
+
+cmds=[cmdL,cmdM,cmdR,cmdLF,cmdM,cmdRF]
 count=0
 
-while True:
-    cmd=cmds[count]
+for cmd in cmds:    
     ser.write(cmd.encode())
     print(cmd)
     time.sleep(5)
-    count=count+1
-    if count >2:
-        count=0
 
 
